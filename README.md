@@ -1,5 +1,8 @@
 # VIGENERE-CIPHER
 ## EX. NO: 4
+
+## REGISTER NUMBER : 212223240106
+## NAME : NAVEEN.S
  
 
 ## IMPLEMETATION OF VIGENERE CIPHER
@@ -30,7 +33,38 @@ STEP-8: Repeat the above steps to generate the entire cipher text.
 
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
+int main() {
+    char text[100], key[100];
+    int i, j, choice, val;
+
+    printf("Enter text: ");
+    scanf("%s", text);
+    printf("Enter key : ");
+    scanf("%s", key);
+
+    printf("1. Encrypt\n2. Decrypt\nChoice: ");
+    scanf("%d", &choice);
+
+    printf("Result: ");
+    for (i = 0, j = 0; i < strlen(text); i++, j++) {
+        if (j == strlen(key)) j = 0;
+        if (choice == 1) { // Encrypt
+            val = (toupper(text[i]) - 'A' + toupper(key[j]) - 'A') % 26;
+        } else { // Decrypt
+            val = (toupper(text[i]) - 'A' - (toupper(key[j]) - 'A') + 26) % 26;
+        }
+        printf("%c", val + 'A');
+    }
+    printf("\n");
+    return 0;
+}
+```
 ## OUTPUT
+<img width="1690" height="908" alt="image" src="https://github.com/user-attachments/assets/9b7311cf-7ba9-4250-b02a-de6807e203ff" />
 
 ## RESULT
