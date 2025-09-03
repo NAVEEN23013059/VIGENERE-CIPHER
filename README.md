@@ -68,3 +68,5 @@ int main() {
 <img width="1690" height="908" alt="image" src="https://github.com/user-attachments/assets/9b7311cf-7ba9-4250-b02a-de6807e203ff" />
 
 ## RESULT
+
+The program is successsfully executed and produced correct encrypted and decrypted output using the Vigenere cipher technique.
